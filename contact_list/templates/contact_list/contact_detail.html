@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ contact.first_name }} {{ contact.last_name }} - جزئیات
+{% endblock %}
+
+{% block content %}
+    <h1>جزئیات مخاطب</h1>
+    <p><strong>نام:</strong> {{ contact.first_name }}</p>
+    <p><strong>نام خانوادگی:</strong> {{ contact.last_name }}</p>
+    <p><strong>شماره تلفن:</strong> {{ contact.phone_number }}</p>
+    <p><strong>تاریخ ایجاد:</strong> {{ contact.created_at }}</p>
+    <p><strong>آخرین ویرایش:</strong> {{ contact.updated_at }}</p>
+{% endblock %}
