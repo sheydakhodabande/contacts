@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    افزودن مخاطب
+{% endblock title %}
+
+
+{% block content %}
+
+    <section class="content-section">
+
+        <div class="card">
+
+            <h2 class="page-title">
+                افزودن مخاطب جدید
+            </h2>
+
+            <p class="page-description">
+                اطلاعات مخاطب جدید را وارد کنید.
+            </p>
+
+
+            <form method="post">
+
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <div>
+                    <button type="submit" class="btn btn-primary">
+                        ثبت مخاطب
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+{% endblock content %}
